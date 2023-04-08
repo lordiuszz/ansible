@@ -1,0 +1,16 @@
+---
+  - hosts: all
+    become: true
+    tasks:
+     - name: Update Pack
+       ansible.builtin.apt:
+        update_cache: true
+     - name: install packages
+       ansible.builtin.apt:
+        name:
+          - htop
+          - git
+          - vim-nox
+
+
+
